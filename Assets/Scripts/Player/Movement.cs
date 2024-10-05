@@ -16,11 +16,27 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        //Processing Inputs
+        ProcessInputs();
+        //moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = moveDirection * movementSpeed;
+        //Physics Calculations
+        Move();
+        //rb.velocity = moveDirection * movementSpeed;
+    }
+    void ProcessInputs()
+    {
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+
+        moveDirection = new Vector2(moveX, moveY).normalized;
+    }
+
+    private void Move()
+    {
+        rb.velocity = new Vector2(moveDirection.x * movementSpeed, moveDirection.y * movementSpeed);
     }
 }
