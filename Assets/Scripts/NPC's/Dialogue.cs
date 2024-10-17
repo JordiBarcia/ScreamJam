@@ -12,10 +12,10 @@ public class Dialogue : MonoBehaviour
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
     public string[] dialogue;
-    private int index;
+    private int index = 0;
 
     public float wordSpeed;
-    public bool playesIsClose;
+    public bool playerIsClose;
 
     public GameObject button;
 
@@ -25,14 +25,19 @@ public class Dialogue : MonoBehaviour
 
     private void Start()
     {
-        Characterface = GetComponent<Image>();
-        Characterface.sprite = imageFromDialogue[index];
+        // Aseguramos que se use la referencia del inspector si ya fue asignada
+        if (Characterface == null)
+        {
+            Characterface = GetComponent<Image>();
+        }
+        // Inicializamos la primera imagen correspondiente al primer diálogo
+        UpdateCharacterImage();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playesIsClose) 
+        if (Input.GetKeyDown(KeyCode.E) && playerIsClose) 
         {
             if (dialoguePanel.activeInHierarchy) 
             {
@@ -66,6 +71,7 @@ public class Dialogue : MonoBehaviour
             index++;
             dialogueText.text = "";
             StartCoroutine(Typing());
+            UpdateCharacterImage();  // Actualizamos la imagen con cada nuevo diálogo
         }
         else
         {
@@ -82,18 +88,27 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    private void UpdateCharacterImage()
+    {
+        // Aseguramos que el índice está dentro del rango del array de imágenes
+        if (index < imageFromDialogue.Length)
+        {
+            Characterface.sprite = imageFromDialogue[index];
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) 
         {
-            playesIsClose = true;
+            playerIsClose = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            playesIsClose = false;
+            playerIsClose = false;
             zeroText();
         }
     }
