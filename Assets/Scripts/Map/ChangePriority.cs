@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChangePriority : MonoBehaviour
 {
     // Start is called before the first frame update
-    public SpriteRenderer SpriteDoor;
+    public SpriteRenderer SpriteDoor, SpriteDoor2;
     public GameObject Wall,Entrance;
     void Start()
     {
@@ -24,6 +24,7 @@ public class ChangePriority : MonoBehaviour
             //SpriteWall.sortingOrder = -7;
             //WallCollider.isTrigger = true;
             if (SpriteDoor) SpriteDoor.sortingOrder = -7;
+            if (SpriteDoor2) SpriteDoor2.sortingOrder = -7;
             if (Wall) Wall.SetActive(false);
             if (Entrance) Entrance.SetActive(true);
         }
@@ -35,6 +36,7 @@ public class ChangePriority : MonoBehaviour
             //SpriteWall.sortingOrder = -4;
             //WallCollider.isTrigger = false;
             if (SpriteDoor) SpriteDoor.sortingOrder = 0;
+            if (SpriteDoor2) SpriteDoor2.sortingOrder = 0;
             if (Wall) Wall.SetActive(true);
             if (Entrance) Entrance.SetActive(false);
         }
