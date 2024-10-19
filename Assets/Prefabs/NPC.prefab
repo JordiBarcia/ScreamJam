@@ -1069,8 +1069,8 @@ MonoBehaviour:
   - "\xA1Aaaah! Entonces has escapado para poder ir a verla. Entiendo, entiendo."
   wordSpeed: 0.01
   playerIsClose: 0
-  button: {fileID: 1526092534932854566}
-  Characterface: {fileID: 4005341975445938718}
+  button: {fileID: 1801992601946258477}
+  Characterface: {fileID: 8448843069812562228}
   imageFromDialogue:
   - {fileID: 21300000, guid: 5463857ee7c54d94782e3dba26a0cffb, type: 3}
   - {fileID: 21300000, guid: ce2e5850fd36c7b4d9db2997feafd568, type: 3}
