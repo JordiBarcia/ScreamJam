@@ -431,6 +431,7 @@ GameObject:
   - component: {fileID: 8393482353268689116}
   - component: {fileID: 7907586414625183404}
   - component: {fileID: 234000452425482104}
+  - component: {fileID: -5569549985739129301}
   m_Layer: 0
   m_Name: Hint
   m_TagString: Untagged
@@ -526,6 +527,41 @@ MonoBehaviour:
   button: {fileID: 5119503428699466327}
   Characterface: {fileID: 3853666285139951354}
   imageFromDialogue: []
+--- !u!58 &-5569549985739129301
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5502777203292433115}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.89
 --- !u!1 &8231930283215047975
 GameObject:
   m_ObjectHideFlags: 0
