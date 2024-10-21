@@ -6,6 +6,13 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     //Variables dels objectes guardar-ho aquí
+
+    public bool hasMirror;
+    public bool hasMatches;
+    public bool hasKeyDoctor;
+    public bool hasBottleWine;
+    public bool hasKeyWardrobe;
+
     void Start()
     {
       
