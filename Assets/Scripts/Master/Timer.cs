@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.U2D;
 using UnityEngine.UI;
 
@@ -10,11 +12,14 @@ public class Timer : MonoBehaviour
     public float timeLeft;
     public bool isTimerOn;
     public TextMeshProUGUI timerTxt;
-
+    private Animator transitionAnimator;
+    private int sceneIndex;
     // Start is called before the first frame update
     void Start()
     {
         isTimerOn = true;
+        transitionAnimator = GetComponent<Animator>();
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
@@ -29,12 +34,19 @@ public class Timer : MonoBehaviour
             else //Si el timer es mes petit o igual a 0 reset de posicio y pastilla
             {
                 timeLeft = 0;
-                isTimerOn= false;
+                isTimerOn = false;
+                StartCoroutine(SceneLoad(sceneIndex));
+                
             }
         }
     }
 
-
+    public IEnumerator SceneLoad(int sceneIndex)
+    {
+        transitionAnimator.SetTrigger("StartTransition");
+        yield return new WaitForSeconds(2.1f);
+        SceneManager.LoadScene(sceneIndex);
+    }
     void UpdateTimer(float currentTime) 
     {
         currentTime += 1;

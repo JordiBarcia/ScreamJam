@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float movementSpeed = 2f;
     private Rigidbody2D rb;
     private Vector2 moveDirection;
+    public Timer timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +18,21 @@ public class Movement : MonoBehaviour
     void Update()
     {
         //Processing Inputs
-        ProcessInputs();
+        if (timer.isTimerOn) ProcessInputs();
         //moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
     }
 
     private void FixedUpdate()
     {
         //Physics Calculations
-        Move();
+        if (timer.isTimerOn)
+        {
+            Move();
+        }
+        else
+        {
+            rb.velocity = new Vector2(0,0);
+        }
         //rb.velocity = moveDirection * movementSpeed;
     }
     void ProcessInputs()
