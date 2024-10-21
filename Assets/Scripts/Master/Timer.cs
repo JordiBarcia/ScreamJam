@@ -36,7 +36,7 @@ public class Timer : MonoBehaviour
                 timeLeft = 0;
                 isTimerOn = false;
                 StartCoroutine(SceneLoad(sceneIndex));
-                
+              
             }
         }
     }
@@ -46,6 +46,7 @@ public class Timer : MonoBehaviour
         transitionAnimator.SetTrigger("StartTransition");
         yield return new WaitForSeconds(2.1f);
         SceneManager.LoadScene(sceneIndex);
+        
     }
     void UpdateTimer(float currentTime) 
     {
