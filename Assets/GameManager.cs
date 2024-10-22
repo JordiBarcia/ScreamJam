@@ -26,4 +26,25 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    public void TriggerMirror() 
+    {
+        hasMirror = true;
+    }
+    public void TriggerMatches()
+    {
+        hasMatches = true;
+    }
+    public void TriggerDoctor()
+    {
+        hasKeyDoctor = true;
+    }
+    public void TriggerBottleWine()
+    {
+        hasBottleWine = true;
+    }
+    public void TriggerWardrobe()
+    {
+        hasKeyWardrobe = true;
+    }
 }
