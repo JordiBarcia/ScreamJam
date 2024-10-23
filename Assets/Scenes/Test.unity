@@ -70371,7 +70371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1541114681534520015, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 1541114681534520015, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -83480,6 +83480,10 @@ PrefabInstance:
     - target: {fileID: 102831736686019278, guid: 8ae66acf85f4b0747a3cdfb14527b875, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 102831736686019278, guid: 8ae66acf85f4b0747a3cdfb14527b875, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4730143405902457429, guid: 8ae66acf85f4b0747a3cdfb14527b875, type: 3}
       propertyPath: m_Camera
