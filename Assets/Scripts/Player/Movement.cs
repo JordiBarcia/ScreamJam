@@ -58,6 +58,7 @@ public class Movement : MonoBehaviour
             character.ResetTrigger("isMovingLeft");
             character.ResetTrigger("isMovingDown");
             character.ResetTrigger("isMovingUp");
+            character.ResetTrigger("isIdle");
         }
         if (moveX == -1)
         {
@@ -65,6 +66,7 @@ public class Movement : MonoBehaviour
             character.ResetTrigger("isMovingRight");
             character.ResetTrigger("isMovingDown");
             character.ResetTrigger("isMovingUp");
+            character.ResetTrigger("isIdle");
         }
         if (moveY == 1)
         {
@@ -72,6 +74,7 @@ public class Movement : MonoBehaviour
             character.ResetTrigger("isMovingDown");
             character.ResetTrigger("isMovingRight");
             character.ResetTrigger("isMovingLeft");
+            character.ResetTrigger("isIdle");
         }
         if (moveY == -1)
         {
@@ -79,12 +82,20 @@ public class Movement : MonoBehaviour
             character.ResetTrigger("isMovingUp");
             character.ResetTrigger("isMovingRight");
             character.ResetTrigger("isMovingLeft");
+            character.ResetTrigger("isIdle");
+        }
+        if (moveX == 0 && moveY == 0) 
+        {
+            character.ResetTrigger("isMovingDown");
+            character.ResetTrigger("isMovingUp");
+            character.ResetTrigger("isMovingRight");
+            character.ResetTrigger("isMovingLeft");
+            character.SetTrigger("isIdle");
         }
     }
 
     private void Move()
     {
-        
         rb.velocity = new Vector2(moveDirection.x * movementSpeed, moveDirection.y * movementSpeed);
     }
 }
