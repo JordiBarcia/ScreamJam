@@ -30,7 +30,6 @@ public class Movement : MonoBehaviour
         if (timer.isTimerOn)
         {
             Move();
-            Debug.Log(moveDirection);
         }
         else
         {
