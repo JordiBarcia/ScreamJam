@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: a742f5085efc5544e841bc781a83e6a3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tiles, con los 3 objetos clave_0
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37da08da444a9dc40bcffaec2e078da7
+      internalID: 1534140537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles, con los 3 objetos clave_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062c1b29811a05340a916061df999a6e
+      internalID: -493833947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles, con los 3 objetos clave_26
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f719fd4d800d4b94fa4f6d4231b09da5
+      internalID: -77883837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles, con los 3 objetos clave_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e9e7c1623ae844891bbd195be0b434
+      internalID: 1770833167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles, con los 3 objetos clave_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c19f97862dd654abcb06cdf3eaaa3a
+      internalID: -1453740937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tiles, con los 3 objetos clave_0: 1534140537
+      Tiles, con los 3 objetos clave_1: -493833947
+      Tiles, con los 3 objetos clave_10: -1735261216
+      Tiles, con los 3 objetos clave_11: 730490064
+      Tiles, con los 3 objetos clave_12: -892012719
+      Tiles, con los 3 objetos clave_13: 1256346075
+      Tiles, con los 3 objetos clave_14: 766517781
+      Tiles, con los 3 objetos clave_15: 1346398808
+      Tiles, con los 3 objetos clave_16: -1055720493
+      Tiles, con los 3 objetos clave_17: -303576033
+      Tiles, con los 3 objetos clave_18: 1099016256
+      Tiles, con los 3 objetos clave_19: 1397517319
+      Tiles, con los 3 objetos clave_2: 1455575486
+      Tiles, con los 3 objetos clave_20: -2001990487
+      Tiles, con los 3 objetos clave_21: 456142367
+      Tiles, con los 3 objetos clave_22: -834189060
+      Tiles, con los 3 objetos clave_23: 996432963
+      Tiles, con los 3 objetos clave_24: -744842734
+      Tiles, con los 3 objetos clave_25: 833428418
+      Tiles, con los 3 objetos clave_26: -77883837
+      Tiles, con los 3 objetos clave_27: 1352472286
+      Tiles, con los 3 objetos clave_28: -899858757
+      Tiles, con los 3 objetos clave_29: -700523664
+      Tiles, con los 3 objetos clave_3: -569128079
+      Tiles, con los 3 objetos clave_30: 1298962087
+      Tiles, con los 3 objetos clave_31: -1527369421
+      Tiles, con los 3 objetos clave_32: 1461743349
+      Tiles, con los 3 objetos clave_33: -1880705692
+      Tiles, con los 3 objetos clave_34: 819287437
+      Tiles, con los 3 objetos clave_35: -2127954307
+      Tiles, con los 3 objetos clave_36: -117550873
+      Tiles, con los 3 objetos clave_37: 986169288
+      Tiles, con los 3 objetos clave_38: -868509734
+      Tiles, con los 3 objetos clave_39: -1390760054
+      Tiles, con los 3 objetos clave_4: 1156419803
+      Tiles, con los 3 objetos clave_40: 1556533001
+      Tiles, con los 3 objetos clave_41: 1770833167
+      Tiles, con los 3 objetos clave_42: -1453740937
+      Tiles, con los 3 objetos clave_43: -53609813
+      Tiles, con los 3 objetos clave_44: 1076164509
+      Tiles, con los 3 objetos clave_45: -712527291
+      Tiles, con los 3 objetos clave_46: 258439894
+      Tiles, con los 3 objetos clave_47: -595660025
+      Tiles, con los 3 objetos clave_48: 849975004
+      Tiles, con los 3 objetos clave_49: -137004477
+      Tiles, con los 3 objetos clave_5: 680455630
+      Tiles, con los 3 objetos clave_50: -1244801603
+      Tiles, con los 3 objetos clave_51: -1176681230
+      Tiles, con los 3 objetos clave_52: 435515266
+      Tiles, con los 3 objetos clave_53: 702520912
+      Tiles, con los 3 objetos clave_54: 1741078389
+      Tiles, con los 3 objetos clave_55: -1173252431
+      Tiles, con los 3 objetos clave_56: -679696271
+      Tiles, con los 3 objetos clave_57: 665469168
+      Tiles, con los 3 objetos clave_58: -1968535904
+      Tiles, con los 3 objetos clave_59: 654310088
+      Tiles, con los 3 objetos clave_6: -2052916855
+      Tiles, con los 3 objetos clave_7: 1261770154
+      Tiles, con los 3 objetos clave_8: 250994975
+      Tiles, con los 3 objetos clave_9: -1989899249
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
