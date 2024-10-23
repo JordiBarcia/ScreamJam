@@ -7160,7 +7160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7016122394774154716, guid: 75fe7c589cb6f034f8136847a1945176, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8355604456171333149, guid: 75fe7c589cb6f034f8136847a1945176, type: 3}
       propertyPath: m_Size.x
@@ -71370,6 +71370,18 @@ PrefabInstance:
     - target: {fileID: 6814580721078102963, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: m_Name
       value: Esquizo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052885123187186611, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052885123187186611, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052885123187186611, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7052885123187186611, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: m_LocalPosition.x
