@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerTxt;
     private Animator transitionAnimator;
     private int sceneIndex;
+    private Dialogue dialogue;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +36,6 @@ public class Timer : MonoBehaviour
                 timeLeft = 0;
                 isTimerOn = false;
                 StartCoroutine(SceneLoad(sceneIndex));
-              
             }
         }
     }

@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
 {
@@ -22,6 +23,17 @@ public class Dialogue : MonoBehaviour
     public Image Characterface;
     public Sprite[] imageFromDialogue;
 
+    public bool isEnding;
+    private Animator transitionAnimator;
+
+    private Timer timer;
+    int sceneIndex;
+
+    public GameManager gameManager;
+
+    public bool isPesonalidad;
+    public bool isDepre;
+    public bool isEsquizo;
 
     private void Start()
     {
@@ -32,6 +44,8 @@ public class Dialogue : MonoBehaviour
         }
         // Inicializamos la primera imagen correspondiente al primer diálogo
         UpdateCharacterImage();
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        gameManager = GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -76,6 +90,23 @@ public class Dialogue : MonoBehaviour
         else
         {
             zeroText();
+            if (isEnding) 
+            {
+                //timer.GetComponent<Timer>().isTimerOn = false;
+                Debug.Log("FINALE");
+                if (isPesonalidad) 
+                {
+                    gameManager.GetComponent<GameManager>().deadPersonalidad = true;
+                }
+                if (isDepre)
+                {
+                    gameManager.GetComponent<GameManager>().deadDepre = true;
+                }
+                if (isEsquizo)
+                {
+                    gameManager.GetComponent<GameManager>().deadEsquizo = true;
+                }
+            }
         }
     }
 

@@ -12,6 +12,7 @@ public class PickUpItems : MonoBehaviour
     public bool isKeyDoctor;
     public bool isBottleWine;
     public bool isKeyWardrobe;
+    public bool isKeyLunch;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,10 @@ public class PickUpItems : MonoBehaviour
             if (isKeyWardrobe) 
             {
                 gameManager.GetComponent<GameManager>().TriggerWardrobe();
+            }
+            if (isKeyLunch) 
+            {
+                gameManager.GetComponent <GameManager>().TriggerLunch();
             }
             Destroy(this.gameObject);
         }

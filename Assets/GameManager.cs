@@ -12,6 +12,12 @@ public class GameManager : MonoBehaviour
     public bool hasKeyDoctor;
     public bool hasBottleWine;
     public bool hasKeyWardrobe;
+    public bool hasKeyLunch;
+    public bool hasKeySalon;
+
+    public bool deadPersonalidad;
+    public bool deadDepre;
+    public bool deadEsquizo;
 
     public GameObject personalidad;
     public GameObject personalidad2;
@@ -22,6 +28,16 @@ public class GameManager : MonoBehaviour
 
     public GameObject doorsWardrobe;
     public GameObject doorsDoctor;
+    public GameObject doorsLunch;
+    public GameObject doorSalon;
+
+    public GameObject deathBedpersonalidad;
+    public GameObject deathBedDepre;
+    public GameObject deathBedEsquizo;
+
+    public GameObject keyDoctor;
+    public GameObject keyWardrobe;
+    public GameObject keyLunch;
 
     void Start()
     {
@@ -34,7 +50,62 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (hasMirror) 
+        {
+            personalidad.SetActive(false);
+            personalidad2.SetActive(true);
+            deathBedpersonalidad.SetActive(true);
+        }
+        if (hasMatches) {
+            depre.SetActive(false);
+            depre2.SetActive(true);
+            deathBedDepre.SetActive(true);
+        }
+        if (hasBottleWine) {
+            esquizo.SetActive(false);
+            esquiz2.SetActive(true);
+            deathBedEsquizo.SetActive(true);
+        }
+        if (hasKeyWardrobe) {
+            doorsWardrobe.SetActive(false); 
+        }
+        if (hasKeyDoctor) {
+            doorsDoctor.SetActive(false);
+        }
+
+        if (hasKeyLunch)
+        {
+            doorsLunch.SetActive(false);
+        }
+
+        if (hasKeySalon) 
+        {
+            doorSalon.SetActive(false);
+        }
+
+        if (deadPersonalidad) 
+        {
+            personalidad.SetActive(false);
+            personalidad2.SetActive(false);
+            deathBedpersonalidad.SetActive(true);
+            keyWardrobe.SetActive(true);
+        }
+
+        if (deadDepre) 
+        {
+            depre.SetActive(false);
+            depre2.SetActive(false);
+            deathBedDepre.SetActive(true);
+            keyLunch.SetActive(true);
+        }
+
+        if (deadEsquizo) 
+        {
+            esquizo.SetActive(false);
+            esquiz2.SetActive(true);
+            deathBedEsquizo.SetActive(true);
+            keyDoctor.SetActive(true);
+        }
     }
 
     public void TriggerMirror() 
@@ -64,5 +135,15 @@ public class GameManager : MonoBehaviour
     {
         hasKeyWardrobe = true;
         doorsWardrobe.SetActive(false);
+    }
+    public void TriggerLunch() 
+    {
+        hasKeyLunch = true;
+        doorsLunch.SetActive(true);
+    }
+    public void MotherSalon() 
+    {
+        hasKeySalon = true;
+        doorSalon.SetActive(false);
     }
 }
