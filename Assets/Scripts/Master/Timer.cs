@@ -15,16 +15,17 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerTxt;
     private Animator transitionAnimator;
     private int sceneIndex;
-    private Dialogue dialogue;
+    public Dialogue dialogue;
     public GameObject player;
     private Vector3 startPositionPlayer;
     private float timeRestart;
+
     // Start is called before the first frame update
     void Start()
     {
         isTimerOn = true;
         transitionAnimator = GetComponent<Animator>();
-        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        sceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         startPositionPlayer = player.transform.position;
         timeRestart = 2.1f;
         timeLeft = timeLeftStart;
@@ -50,6 +51,10 @@ public class Timer : MonoBehaviour
         else
         {
             Restart();
+        }
+        if (dialogue.isMother) 
+        {
+            SceneLoad();
         }
     }
     public void Restart() 

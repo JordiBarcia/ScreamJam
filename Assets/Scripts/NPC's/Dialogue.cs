@@ -35,6 +35,9 @@ public class Dialogue : MonoBehaviour
     public bool isDepre;
     public bool isEsquizo;
     public bool isNurse;
+    public bool isMother;
+
+    public AudioSource nyam;
 
     private Coroutine typingCoroutine;
 
@@ -103,7 +106,6 @@ public class Dialogue : MonoBehaviour
             }
             if (isEnding)
             {
-                Debug.Log("FINALE");
                 if (isPesonalidad)
                 {
                     gameManager.deadPersonalidad = true;
@@ -115,6 +117,11 @@ public class Dialogue : MonoBehaviour
                 if (isEsquizo)
                 {
                     gameManager.deadEsquizo = true;
+                }
+                if (isMother) 
+                {
+                    nyam.Play();
+                    //Credits
                 }
                 timer.isTimerOn = false;
                 isEnding = false;
