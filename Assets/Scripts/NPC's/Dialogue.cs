@@ -26,7 +26,7 @@ public class Dialogue : MonoBehaviour
     public bool isEnding;
     private Animator transitionAnimator;
 
-    private Timer timer;
+    public Timer timer;
     int sceneIndex;
 
     public GameManager gameManager;
@@ -51,6 +51,7 @@ public class Dialogue : MonoBehaviour
         // Inicializamos la primera imagen correspondiente al primer diálogo
         UpdateCharacterImage();
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        transitionAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -110,6 +111,7 @@ public class Dialogue : MonoBehaviour
                 {
                     gameManager.deadEsquizo = true;
                 }
+                timer.Yeepe();
             }
         }
     }

@@ -35,11 +35,14 @@ public class Timer : MonoBehaviour
             {
                 timeLeft = 0;
                 isTimerOn = false;
-                StartCoroutine(SceneLoad(sceneIndex));
+                Yeepe();
             }
         }
     }
-
+    public void Yeepe() 
+    {
+        StartCoroutine(SceneLoad(sceneIndex));
+    }
     public IEnumerator SceneLoad(int sceneIndex)
     {
         transitionAnimator.SetTrigger("StartTransition");
