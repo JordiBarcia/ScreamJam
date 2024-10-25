@@ -7,7 +7,7 @@ public class ChangePriority : MonoBehaviour
     // Start is called before the first frame update
     public SpriteRenderer SpriteDoor, SpriteDoor2;
     public GameObject Wall,Entrance;
-    public GameObject Light, Light1, Light2, Light3, Light4;
+    public GameObject Light, Light1, Light2, Light3, Light4, Light5;
     void Start()
     {
        
@@ -33,6 +33,7 @@ public class ChangePriority : MonoBehaviour
             if (Light2) Light2.SetActive(true);
             if (Light3) Light3.SetActive(true);
             if (Light4) Light4.SetActive(true);
+            if (Light5) Light5.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -50,6 +51,7 @@ public class ChangePriority : MonoBehaviour
             if (Light2) Light2.SetActive(false);
             if (Light3) Light3.SetActive(false);
             if (Light4) Light4.SetActive(false);
+            if (Light5) Light5.SetActive(false);
         }
     }
 }

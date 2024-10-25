@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     bool donePersonalidad;
     bool doneDepre;
     bool doneEsquizo;
+    private float timeBeforeDead;
 
     private static GameManager instance;
 
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
         donePersonalidad = false;
         doneDepre = false;
         doneEsquizo = false;
+        timeBeforeDead = 2.5f;
     }
     void Awake()
     {
@@ -67,13 +69,17 @@ public class GameManager : MonoBehaviour
         {
             if (deadPersonalidad && !donePersonalidad)
             {
-                personalidad.SetActive(false);
-                personalidad2.SetActive(false);
-                deathBedpersonalidad.SetActive(true);
-                keyWardrobe.SetActive(true);
-                donePersonalidad = true;
+                timeBeforeDead -= Time.deltaTime;
+                if (timeBeforeDead < 0) { 
+                    personalidad.SetActive(false);
+                    personalidad2.SetActive(false);
+                    deathBedpersonalidad.SetActive(true);
+                    keyWardrobe.SetActive(true);
+                    donePersonalidad = true;
+                    timeBeforeDead = 2.5f;
+                }
             }
-            else 
+            else if(!donePersonalidad)
             {
                 personalidad.SetActive(false);
                 personalidad2.SetActive(true);
@@ -82,13 +88,18 @@ public class GameManager : MonoBehaviour
         if (hasMatches) {
             if (deadDepre && !doneDepre)
             {
-                depre.SetActive(false);
-                depre2.SetActive(false);
-                deathBedDepre.SetActive(true);
-                keyLunch.SetActive(true);
-                doneDepre = true;
+                timeBeforeDead -= Time.deltaTime;
+                if (timeBeforeDead < 0)
+                {
+                    depre.SetActive(false);
+                    depre2.SetActive(false);
+                    deathBedDepre.SetActive(true);
+                    keyLunch.SetActive(true);
+                    doneDepre = true;
+                    timeBeforeDead = 2.5f;
+                }
             }
-            else 
+            else if(!doneDepre)
             {
                 depre.SetActive(false);
                 depre2.SetActive(true);
@@ -97,13 +108,18 @@ public class GameManager : MonoBehaviour
         if (hasBottleWine) {
             if (deadEsquizo && !doneEsquizo)
             {
-                esquizo.SetActive(false);
-                esquiz2.SetActive(true);
-                deathBedEsquizo.SetActive(true);
-                keyDoctor.SetActive(true);
-                doneEsquizo = true;
+                timeBeforeDead -= Time.deltaTime;
+                if (timeBeforeDead < 0)
+                {
+                    esquizo.SetActive(false);
+                    esquiz2.SetActive(false);
+                    deathBedEsquizo.SetActive(true);
+                    keyDoctor.SetActive(true);
+                    doneEsquizo = true;
+                    timeBeforeDead = 2.5f;
+                }
             }
-            else
+            else if (!doneEsquizo)
             {
                 esquizo.SetActive(false);
                 esquiz2.SetActive(true);

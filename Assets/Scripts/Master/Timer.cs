@@ -57,9 +57,9 @@ public class Timer : MonoBehaviour
         //SceneLoad();
         if (timeRestart == 2.1f) Fade();
         timeRestart -= Time.deltaTime;
+        if(timeRestart < 0.15f && timeRestart > 0.1f) player.transform.position = startPositionPlayer;
         if (timeRestart <= 0)
         {
-            player.transform.position = startPositionPlayer;
             timeRestart = 2.1f;
             isTimerOn = true;
             timeLeft = timeLeftStart;
@@ -73,6 +73,7 @@ public class Timer : MonoBehaviour
     }
     public IEnumerator SceneLoad()
     {
+        isTimerOn = false;
         transitionAnimator.SetTrigger("StartTransition");
         yield return new WaitForSeconds(2.1f);
         SceneManager.LoadScene(sceneIndex);
