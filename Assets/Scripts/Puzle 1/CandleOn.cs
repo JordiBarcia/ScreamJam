@@ -7,6 +7,7 @@ public class CandleOn : MonoBehaviour
 {
     public GameManager manager;
     public GameObject spotLight;
+    public GameObject darkTint;
 
     bool isClose;
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class CandleOn : MonoBehaviour
         if (manager.GetComponent<GameManager>().hasMatches && isClose && Input.GetKeyDown(KeyCode.E))
         {
             spotLight.SetActive(true);
+            darkTint.SetActive(false);
             //FADE OUT
         }
     }

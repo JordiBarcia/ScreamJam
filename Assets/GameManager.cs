@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     public GameObject keyDoctor;
     public GameObject keyWardrobe;
     public GameObject keyLunch;
+    public GameObject keySalon;
 
     bool donePersonalidad;
     bool doneDepre;
@@ -48,7 +49,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        donePersonalidad = false;
+        doneDepre = false;
+        doneEsquizo = false;
     }
     void Awake()
     {

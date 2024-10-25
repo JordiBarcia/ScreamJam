@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.U2D;
@@ -43,7 +44,7 @@ public class Timer : MonoBehaviour
             {
                 timeLeft = 0;
                 isTimerOn = false;
-                Fade();
+                //Fade();
             }
         }
         else
@@ -54,6 +55,7 @@ public class Timer : MonoBehaviour
     public void Restart() 
     {
         //SceneLoad();
+        if (timeRestart == 2.1f) Fade();
         timeRestart -= Time.deltaTime;
         if (timeRestart <= 0)
         {
@@ -63,6 +65,7 @@ public class Timer : MonoBehaviour
             timeLeft = timeLeftStart;
             transitionAnimator.SetTrigger("EndTransition");
         }
+
     }
     public void Fade()
     {
