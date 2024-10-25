@@ -4536,9 +4536,21 @@ PrefabInstance:
       value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 2114846935}
+    - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: isEnding
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: wordSpeed
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1849476832}
     - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: Characterface
       value: 
@@ -4576,6 +4588,38 @@ PrefabInstance:
       propertyPath: dialogue.Array.data[6]
       value: "Por fin podr\xE1s dormir del todo..."
       objectReference: {fileID: 0}
+    - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: imageFromDialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: imageFromDialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 32a0eb70ff342eb46a838f158cdd104b, type: 3}
+    - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: imageFromDialogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 54841649653b4a84a91481caadc01e0e, type: 3}
+    - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: imageFromDialogue.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 54841649653b4a84a91481caadc01e0e, type: 3}
+    - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: imageFromDialogue.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 32a0eb70ff342eb46a838f158cdd104b, type: 3}
+    - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: imageFromDialogue.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 32a0eb70ff342eb46a838f158cdd104b, type: 3}
+    - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: imageFromDialogue.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 54841649653b4a84a91481caadc01e0e, type: 3}
+    - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
+      propertyPath: imageFromDialogue.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 32a0eb70ff342eb46a838f158cdd104b, type: 3}
     - target: {fileID: 2334414656774680674, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: m_Size.x
       value: 1.74

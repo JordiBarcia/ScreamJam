@@ -34,6 +34,7 @@ public class Dialogue : MonoBehaviour
     public bool isPesonalidad;
     public bool isDepre;
     public bool isEsquizo;
+    public bool isNurse;
 
     private Coroutine typingCoroutine;
 
@@ -96,6 +97,10 @@ public class Dialogue : MonoBehaviour
         else
         {
             zeroText();
+            if (isNurse)
+            {
+                gameObject.SetActive(false);
+            }
             if (isEnding)
             {
                 Debug.Log("FINALE");
