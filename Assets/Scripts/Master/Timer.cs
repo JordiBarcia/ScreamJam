@@ -8,24 +8,32 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeLeft;
+    public float timeLeftStart;
+    private float timeLeft;
     public bool isTimerOn;
     public TextMeshProUGUI timerTxt;
     private Animator transitionAnimator;
     private int sceneIndex;
     private Dialogue dialogue;
+    public GameObject player;
+    private Vector3 startPositionPlayer;
+    private float timeRestart;
     // Start is called before the first frame update
     void Start()
     {
         isTimerOn = true;
         transitionAnimator = GetComponent<Animator>();
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        startPositionPlayer = player.transform.position;
+        timeRestart = 2.1f;
+        timeLeft = timeLeftStart;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isTimerOn) {
+        if (isTimerOn)
+        {
             if (timeLeft > 0)
             {
                 timeLeft -= Time.deltaTime;
@@ -35,15 +43,32 @@ public class Timer : MonoBehaviour
             {
                 timeLeft = 0;
                 isTimerOn = false;
-                Yeepe();
+                Fade();
             }
         }
+        else
+        {
+            Restart();
+        }
     }
-    public void Yeepe() 
+    public void Restart() 
     {
-        StartCoroutine(SceneLoad(sceneIndex));
+        //SceneLoad();
+        timeRestart -= Time.deltaTime;
+        if (timeRestart <= 0)
+        {
+            player.transform.position = startPositionPlayer;
+            timeRestart = 2.1f;
+            isTimerOn = true;
+            timeLeft = timeLeftStart;
+            transitionAnimator.SetTrigger("EndTransition");
+        }
     }
-    public IEnumerator SceneLoad(int sceneIndex)
+    public void Fade()
+    {
+        transitionAnimator.SetTrigger("StartTransition");
+    }
+    public IEnumerator SceneLoad()
     {
         transitionAnimator.SetTrigger("StartTransition");
         yield return new WaitForSeconds(2.1f);
@@ -57,4 +82,5 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
         timerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
 }

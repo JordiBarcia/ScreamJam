@@ -111,7 +111,7 @@ public class Dialogue : MonoBehaviour
                 {
                     gameManager.deadEsquizo = true;
                 }
-                timer.Yeepe();
+                timer.Restart();
             }
         }
     }
