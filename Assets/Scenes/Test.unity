@@ -4482,12 +4482,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: dialogue.Array.data[8]
-      value: "Nunca me dio una raz\xF3n, pero s\xED me dej\xF3 una tarjeta durante
-        sus primeras visitas, con unos cuantos n\xFAmeros escritos en ella."
+      value: "Nunca me dio una raz\xF3n, pero s\xED me dej\xF3 una llave durante
+        sus primeras visitas."
       objectReference: {fileID: 0}
     - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: dialogue.Array.data[9]
-      value: "\xA1Esa tarjeta me vendr\xEDa muy bien! \xBFTodav\xEDa la tienes?"
+      value: "\xA1Esa llave me vendr\xEDa muy bien! \xBFTodav\xEDa la tienes?"
       objectReference: {fileID: 0}
     - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: dialogue.Array.data[10]
@@ -4500,7 +4500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: dialogue.Array.data[12]
-      value: "Podr\xEDas encontrarme una fuente de luz para poder buscar la tarjeta."
+      value: "Podr\xEDas encontrarme una fuente de luz para poder buscar la llave."
       objectReference: {fileID: 0}
     - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: dialogue.Array.data[13]
@@ -82740,12 +82740,12 @@ PrefabInstance:
     - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: dialogue.Array.data[7]
       value: "Te doy la pista, ni\xF1a. No s\xE9 si te has fijado, pero hay una puerta
-        con un panel para poner una contrase\xF1a."
+        roja y yo tengo la llave, creo que hay algo para la chica que siempre est\xE1
+        tumbada."
       objectReference: {fileID: 0}
     - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: dialogue.Array.data[8]
-      value: "Parece ser que tu madre visitaba bastante a menudo a la paciente que
-        est\xE1 todo el d\xEDa en la cama, pero, no se como se llama."
+      value: Parece ser que tu madre la visitaba bastante, pero no se como se llama.
       objectReference: {fileID: 0}
     - target: {fileID: 2237536036396089370, guid: 6fde785cb61b0e546b319fea846d9701, type: 3}
       propertyPath: dialogue.Array.data[9]
