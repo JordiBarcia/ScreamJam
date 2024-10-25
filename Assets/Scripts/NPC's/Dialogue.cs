@@ -35,6 +35,12 @@ public class Dialogue : MonoBehaviour
     public bool isDepre;
     public bool isEsquizo;
 
+    private Coroutine typingCoroutine;
+
+    private void Awake()
+    {
+       
+    }
     private void Start()
     {
         // Aseguramos que se use la referencia del inspector si ya fue asignada
@@ -45,29 +51,28 @@ public class Dialogue : MonoBehaviour
         // Inicializamos la primera imagen correspondiente al primer diálogo
         UpdateCharacterImage();
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        gameManager = GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerIsClose) 
+        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
-            if (dialoguePanel.activeInHierarchy) 
+            if (dialoguePanel.activeInHierarchy)
             {
                 zeroText();
             }
-            else 
+            else
             {
                 dialoguePanel.SetActive(true);
-                StartCoroutine(Typing());
+                StartTyping();
             }
         }
-        if (dialogueText.text == dialogue[index]) 
+        if (dialogueText.text == dialogue[index])
         {
             button.SetActive(true);
         }
-        
+
     }
 
     public void zeroText() 
@@ -84,35 +89,45 @@ public class Dialogue : MonoBehaviour
         {
             index++;
             dialogueText.text = "";
-            StartCoroutine(Typing());
-            UpdateCharacterImage();  // Actualizamos la imagen con cada nuevo diálogo
+            StartTyping();
+            UpdateCharacterImage();
         }
         else
         {
             zeroText();
-            if (isEnding) 
+            if (isEnding)
             {
-                //timer.GetComponent<Timer>().isTimerOn = false;
                 Debug.Log("FINALE");
-                if (isPesonalidad) 
+                if (isPesonalidad)
                 {
-                    gameManager.GetComponent<GameManager>().deadPersonalidad = true;
+                    gameManager.deadPersonalidad = true;
                 }
                 if (isDepre)
                 {
-                    gameManager.GetComponent<GameManager>().deadDepre = true;
+                    gameManager.deadDepre = true;
                 }
                 if (isEsquizo)
                 {
-                    gameManager.GetComponent<GameManager>().deadEsquizo = true;
+                    gameManager.deadEsquizo = true;
                 }
             }
         }
     }
 
+    private void StartTyping()
+    {
+        // Cancela la corutina actual si existe
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+        typingCoroutine = StartCoroutine(Typing());
+    }
+
     IEnumerator Typing() 
     {
-        foreach (char letter in dialogue[index].ToCharArray()) 
+        dialogueText.text = ""; // Reinicia el texto antes de empezar a escribir
+        foreach (char letter in dialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);

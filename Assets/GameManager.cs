@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -19,11 +20,11 @@ public class GameManager : MonoBehaviour
     public bool deadDepre;
     public bool deadEsquizo;
 
-    public GameObject personalidad;
+    GameObject personalidad;
     public GameObject personalidad2;
-    public GameObject depre;
+    GameObject depre;
     public GameObject depre2;
-    public GameObject esquizo;
+    GameObject esquizo;
     public GameObject esquiz2;
 
     public GameObject doorsWardrobe;
@@ -39,32 +40,71 @@ public class GameManager : MonoBehaviour
     public GameObject keyWardrobe;
     public GameObject keyLunch;
 
+    bool donePersonalidad;
+    bool doneDepre;
+    bool doneEsquizo;
+
+    private static GameManager instance;
+
     void Start()
     {
-      
+        
     }
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        personalidad = GameObject.FindWithTag("T.Personalidad");
+        depre = GameObject.FindWithTag("Depre");
+        esquizo = GameObject.FindWithTag("Esquizo");
     }
     // Update is called once per frame
     void Update()
     {
         if (hasMirror) 
         {
-            personalidad.SetActive(false);
-            personalidad2.SetActive(true);
-            deathBedpersonalidad.SetActive(true);
+            if (deadPersonalidad && !donePersonalidad)
+            {
+                personalidad.SetActive(false);
+                personalidad2.SetActive(false);
+                deathBedpersonalidad.SetActive(true);
+                keyWardrobe.SetActive(true);
+                donePersonalidad = true;
+            }
+            else 
+            {
+                personalidad.SetActive(false);
+                personalidad2.SetActive(true);
+            }
         }
         if (hasMatches) {
-            depre.SetActive(false);
-            depre2.SetActive(true);
-            deathBedDepre.SetActive(true);
+            if (deadDepre && !doneDepre)
+            {
+                depre.SetActive(false);
+                depre2.SetActive(false);
+                deathBedDepre.SetActive(true);
+                keyLunch.SetActive(true);
+                doneDepre = true;
+            }
+            else 
+            {
+                depre.SetActive(false);
+                depre2.SetActive(true);
+            }
         }
         if (hasBottleWine) {
-            esquizo.SetActive(false);
-            esquiz2.SetActive(true);
-            deathBedEsquizo.SetActive(true);
+            if (deadEsquizo && !doneEsquizo)
+            {
+                esquizo.SetActive(false);
+                esquiz2.SetActive(true);
+                deathBedEsquizo.SetActive(true);
+                keyDoctor.SetActive(true);
+                doneEsquizo = true;
+            }
+            else
+            {
+                esquizo.SetActive(false);
+                esquiz2.SetActive(true);
+            }
         }
         if (hasKeyWardrobe) {
             doorsWardrobe.SetActive(false); 
@@ -82,30 +122,16 @@ public class GameManager : MonoBehaviour
         {
             doorSalon.SetActive(false);
         }
+    }
 
-        if (deadPersonalidad) 
-        {
-            personalidad.SetActive(false);
-            personalidad2.SetActive(false);
-            deathBedpersonalidad.SetActive(true);
-            keyWardrobe.SetActive(true);
-        }
-
-        if (deadDepre) 
-        {
-            depre.SetActive(false);
-            depre2.SetActive(false);
-            deathBedDepre.SetActive(true);
-            keyLunch.SetActive(true);
-        }
-
-        if (deadEsquizo) 
-        {
-            esquizo.SetActive(false);
-            esquiz2.SetActive(true);
-            deathBedEsquizo.SetActive(true);
-            keyDoctor.SetActive(true);
-        }
+    void SetNPCS() 
+    {
+        personalidad = GameObject.FindWithTag("T.Personalidad");
+        personalidad2 = GameObject.FindWithTag("T.Personalidad2");
+        depre = GameObject.FindWithTag("Depre");
+        depre2 = GameObject.FindWithTag("Depre2");
+        esquizo = GameObject.FindWithTag("Esquizo");
+        esquiz2 = GameObject.FindWithTag("Esquizo2");
     }
 
     public void TriggerMirror() 

@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - T.Personalidad
+  - T.Personalidad2
+  - Depre
+  - Depre2
+  - Esquizo
+  - Esquizo2
   layers:
   - Default
   - TransparentFX
