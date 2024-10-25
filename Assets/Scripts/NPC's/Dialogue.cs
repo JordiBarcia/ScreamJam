@@ -121,6 +121,7 @@ public class Dialogue : MonoBehaviour
                 if (isMother) 
                 {
                     nyam.Play();
+                    timer.changeScene = true;
                     //Credits
                 }
                 timer.isTimerOn = false;

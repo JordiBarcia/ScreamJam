@@ -15,10 +15,12 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerTxt;
     private Animator transitionAnimator;
     private int sceneIndex;
-    public Dialogue dialogue;
+    private Dialogue dialogue;
     public GameObject player;
     private Vector3 startPositionPlayer;
     private float timeRestart;
+    public GameObject Nurse;
+    public bool changeScene;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,7 @@ public class Timer : MonoBehaviour
         startPositionPlayer = player.transform.position;
         timeRestart = 2.1f;
         timeLeft = timeLeftStart;
+        changeScene = false;
     }
 
     // Update is called once per frame
@@ -52,37 +55,36 @@ public class Timer : MonoBehaviour
         {
             Restart();
         }
-        if (dialogue.isMother) 
-        {
-            SceneLoad();
-        }
     }
     public void Restart() 
     {
         //SceneLoad();
         if (timeRestart == 2.1f) Fade();
         timeRestart -= Time.deltaTime;
-        if(timeRestart < 0.15f && timeRestart > 0.1f) player.transform.position = startPositionPlayer;
+        if (!changeScene)
+        {
+            if (timeRestart < 0.15f && timeRestart > 0.1f) player.transform.position = startPositionPlayer;
+        }
         if (timeRestart <= 0)
         {
-            timeRestart = 2.1f;
-            isTimerOn = true;
-            timeLeft = timeLeftStart;
-            transitionAnimator.SetTrigger("EndTransition");
+            if (!changeScene)
+            {
+                timeRestart = 2.1f;
+                isTimerOn = true;
+                timeLeft = timeLeftStart;
+                transitionAnimator.SetTrigger("EndTransition");
+                Nurse.SetActive(true);
+            }
+            else
+            {
+                SceneManager.LoadScene(sceneIndex);
+            }
         }
 
     }
     public void Fade()
     {
         transitionAnimator.SetTrigger("StartTransition");
-    }
-    public IEnumerator SceneLoad()
-    {
-        isTimerOn = false;
-        transitionAnimator.SetTrigger("StartTransition");
-        yield return new WaitForSeconds(2.1f);
-        SceneManager.LoadScene(sceneIndex);
-        
     }
     void UpdateTimer(float currentTime) 
     {
