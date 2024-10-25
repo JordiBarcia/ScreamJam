@@ -41,6 +41,12 @@ public class GameManager : MonoBehaviour
     public GameObject keyLunch;
     public GameObject keySalon;
 
+    public GameObject ForbiddenDoctor;
+    public GameObject ForbiddenWardrobe;
+    public GameObject ForbiddenLunch;
+    public GameObject ForbiddenSalon;
+    
+
     bool donePersonalidad;
     bool doneDepre;
     bool doneEsquizo;
@@ -84,6 +90,11 @@ public class GameManager : MonoBehaviour
                 personalidad.SetActive(false);
                 personalidad2.SetActive(true);
             }
+            if (donePersonalidad)
+            {
+                personalidad.SetActive(false);
+                personalidad2.SetActive(false);
+            }
         }
         if (hasMatches) {
             if (deadDepre && !doneDepre)
@@ -103,6 +114,11 @@ public class GameManager : MonoBehaviour
             {
                 depre.SetActive(false);
                 depre2.SetActive(true);
+            }
+            if (doneDepre)
+            {
+                depre.SetActive(false);
+                depre2.SetActive(false);
             }
         }
         if (hasBottleWine) {
@@ -124,22 +140,31 @@ public class GameManager : MonoBehaviour
                 esquizo.SetActive(false);
                 esquiz2.SetActive(true);
             }
+            if (doneEsquizo)
+            {
+                esquizo.SetActive(false);
+                esquiz2.SetActive(false);
+            }
         }
         if (hasKeyWardrobe) {
-            doorsWardrobe.SetActive(false); 
+            doorsWardrobe.SetActive(false);
+            ForbiddenWardrobe.SetActive(false);
         }
         if (hasKeyDoctor) {
             doorsDoctor.SetActive(false);
+            ForbiddenDoctor.SetActive(false);
         }
 
         if (hasKeyLunch)
         {
             doorsLunch.SetActive(false);
+            ForbiddenLunch.SetActive(false);
         }
 
         if (hasKeySalon) 
         {
             doorSalon.SetActive(false);
+            ForbiddenSalon.SetActive(false);
         }
     }
 
